@@ -99,14 +99,14 @@ cmr_session.get_token(config.earthdata_user, config.earthdata_pass)
 ## MODIS -- aqua and terra
 # cmr_session.search_collections('2007-08-16', '2007-08-21', instrument='MODIS')
 ## landsat
-cmr_session.search_collections('2007-08-19', '2007-08-21', point=jamaica_point)
+# cmr_session.search_collections('2007-08-19', '2007-08-21', point=jamaica_point)
 
 ## Terra platform
-# cmr_session.search_granules('2007-08-16', '2007-08-21', concept_id='C203234448-LAADS', instrument='MODIS'
-#     point=jamaica_point)
+# cmr_session.search_granules('2007-08-16', '2007-08-21', concept_id='C203234448-LAADS', instrument='MODIS',
+    # point=jamaica_point)
 
 ## Aqua platform
-# cmr_session.search_granules('2007-08-16', '2007-08-21', concept_id='C203234523-LAADS', instrument='MODIS',
-#     point=jamaica_point)
+cmr_session.search_granules('2007-08-16', '2007-08-21', concept_id='C203234523-LAADS', instrument='MODIS',
+    point=jamaica_point)
 
 cmr_session.delete_token()
